@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanOutputs": true,
+  "rewrites": [
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" }
+  ],
+  "redirects": [
+    { "source": "/(.*)", "destination": "https://kblox-studio.vercel.app/:splat", "permanent": true, "has": [{ "type": "host", "value": "www.kblox-studio.vercel.app" }] }
+  ]
+}
