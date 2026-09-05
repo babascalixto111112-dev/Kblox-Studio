@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBlox Studio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0D0F17; color: #E5EDF5; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+        a { color: #32A8FF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>KBlox Studio</h1>
+    <p>Um editor de experiências Roblox independente para Android.</p>
+    <p>Este site serve como redirecionador seguro para autenticação OAuth 2.0.</p>
+    <p>Para mais informações, consulte nossa <a href="/privacy">Política de Privacidade</a> e <a href="/terms">Termos de Serviço</a>.</p>
+    <footer style="margin-top: 2rem; font-size: 0.875rem; color: #8996A8;">
+        Developed by Calixto • © 2026 KBlox Studio
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        if (code) {
+            window.location.href = 'https://kblox-auth-stub.vercel.app/redirect?' + window.location.search;
+        }
+    </script>
+</body>
+</html>
